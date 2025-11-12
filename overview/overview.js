@@ -9,38 +9,38 @@ const specialtiesData = [
     title: "تطوير تطبيقات الموبايل",
     short: "صانع التجربة اليومية في راحة اليد",
     long: "يكتب الأكواد التي ترافق المستخدم في يومه، فيتعامل مع السرعة والدقة كأنهما إيقاع واحد. كل تطبيق يولد من يديه هو أداة تبسيط للحياة ونافذة على المستقبل.",
-    img: "../assets/specialties/in_a_creative_inspiring_and_educational_way_scene.jpeg",
+    img: "../assets/specialties/all_specialists/s1.jpeg",
   },
   {
     title: "الذكاء الاصطناعي",
     short: "مُبرمج الوعي الرقمي",
     long: "يعيد تعريف معنى الفهم من خلال البيانات. يخلق أنظمة تتأمل وتستنتج وتبدع، ويمزج بين منطق الرياضيات وحدس الإنسان في معادلة واحدة تفتح أبواب الثورة القادمة.",
-    img: "../assets/specialties/a_thoughtful_ai_researcher_or_innovator_sits.jpeg",
+    img: "../assets/specialties/all_specialists/s2.jpeg",
   },
   {
     title: "تصميم الجرافيك",
     short: "الفنان الرقمي الذي يترجم الفكرة إلى هوية",
     long: "ينسج الألوان والخطوط ليجعل الفكرة تُرى وتُحسّ قبل أن تُفهم. كل تصميم يصنعه هو توقيعٌ بصريٌّ يُخلّد المعنى في الذاكرة، ويمنح المشروع وجهه الحقيقي.",
-    img: "../assets/specialties/create_a_2d_hand_drawn_digital_illustration_representing (2).jpeg",
+    img: "../assets/specialties/all_specialists/s3.jpeg",
   },
   {
     title: "تطوير مواقع الويب",
     short: "مهندس الواجهة والجوهر",
     long: "يبني العوالم الرقمية التي يسكنها المستخدمون. يوازن بين الجمال والوظيفة، وبين الكود والتجربة. كل سطر يكتبه يربط بين الفكرة والواقع بلمسة من الإتقان.",
-    img: "../assets/specialties/create_a_2d_hand_drawn_digital_illustration_that.jpeg",
+    img: "../assets/specialties/all_specialists/s4.jpeg",
   },
 
   {
     title: "الأمن السيبراني",
     short: "حارس الأنظمة ومهندس الدفاعات الرقمية",
     long: "يمتلك مهارة اكتشاف الثغرات قبل أن تُستغل، وتحليل الهجمات قبل أن تتكرر. يعمل بدقة عالية بين الفوضى والنظام، ليبقي العالم الرقمي آمنًا ومتوازنًا.",
-    img: "../assets/specialties/create_a_2d_hand_drawn_digital_illustration_representing.jpeg",
+    img: "../assets/specialties/all_specialists/s5.jpeg",
   },
   {
     title: "الباك إند",
     short: "القلب النابض الذي لا يُرى",
     long: "لكنه يحمل كل شيء. يبني منطق النظام ويصون استقراره، كمهندسٍ في أعماق آلة ضخمة لا تتوقف. كل سطر كود يكتبه هو صمام أمان، وكل بنية يصممها هي وعدٌ بالثبات في وجه الفوضى.",
-    img: "../assets/specialties/create_a_2d_hand_drawn_digital_illustration_representing (3).jpeg",
+    img: "../assets/specialties/all_specialists/s6.jpeg",
   },
 ];
 
