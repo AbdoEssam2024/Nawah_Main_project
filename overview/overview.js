@@ -3,44 +3,45 @@ const title = document.querySelector(".image-container h4");
 const shortDesc = document.querySelector(".image-container > p:first-of-type");
 const longDesc = document.querySelector(".image-container > p:last-of-type");
 const icons = document.querySelectorAll(".icons img");
+const showComingSoonAlert = document.getElementById("coming-soon-alert");
 
 const specialtiesData = [
   {
     title: "تطوير تطبيقات الموبايل",
     short: "صانع التجربة اليومية في راحة اليد",
     long: "يكتب الأكواد التي ترافق المستخدم في يومه، فيتعامل مع السرعة والدقة كأنهما إيقاع واحد. كل تطبيق يولد من يديه هو أداة تبسيط للحياة ونافذة على المستقبل.",
-    img: "../assets/specialties/all_specialists/s1.jpeg",
+    img: "../assets/specialties/in_a_creative_inspiring_and_educational_way_scene.jpeg",
   },
   {
     title: "الذكاء الاصطناعي",
     short: "مُبرمج الوعي الرقمي",
     long: "يعيد تعريف معنى الفهم من خلال البيانات. يخلق أنظمة تتأمل وتستنتج وتبدع، ويمزج بين منطق الرياضيات وحدس الإنسان في معادلة واحدة تفتح أبواب الثورة القادمة.",
-    img: "../assets/specialties/all_specialists/s2.jpeg",
+    img: "../assets/specialties/a_thoughtful_ai_researcher_or_innovator_sits.jpeg",
   },
   {
     title: "تصميم الجرافيك",
     short: "الفنان الرقمي الذي يترجم الفكرة إلى هوية",
     long: "ينسج الألوان والخطوط ليجعل الفكرة تُرى وتُحسّ قبل أن تُفهم. كل تصميم يصنعه هو توقيعٌ بصريٌّ يُخلّد المعنى في الذاكرة، ويمنح المشروع وجهه الحقيقي.",
-    img: "../assets/specialties/all_specialists/s3.jpeg",
+    img: "../assets/specialties/create_a_2d_hand_drawn_digital_illustration_representing (2).jpeg",
   },
   {
     title: "تطوير مواقع الويب",
     short: "مهندس الواجهة والجوهر",
     long: "يبني العوالم الرقمية التي يسكنها المستخدمون. يوازن بين الجمال والوظيفة، وبين الكود والتجربة. كل سطر يكتبه يربط بين الفكرة والواقع بلمسة من الإتقان.",
-    img: "../assets/specialties/all_specialists/s4.jpeg",
+    img: "../assets/specialties/create_a_2d_hand_drawn_digital_illustration_that.jpeg",
   },
 
   {
     title: "الأمن السيبراني",
     short: "حارس الأنظمة ومهندس الدفاعات الرقمية",
     long: "يمتلك مهارة اكتشاف الثغرات قبل أن تُستغل، وتحليل الهجمات قبل أن تتكرر. يعمل بدقة عالية بين الفوضى والنظام، ليبقي العالم الرقمي آمنًا ومتوازنًا.",
-    img: "../assets/specialties/all_specialists/s5.jpeg",
+    img: "../assets/specialties/create_a_2d_hand_drawn_digital_illustration_representing.jpeg",
   },
   {
     title: "الباك إند",
     short: "القلب النابض الذي لا يُرى",
     long: "لكنه يحمل كل شيء. يبني منطق النظام ويصون استقراره، كمهندسٍ في أعماق آلة ضخمة لا تتوقف. كل سطر كود يكتبه هو صمام أمان، وكل بنية يصممها هي وعدٌ بالثبات في وجه الفوضى.",
-    img: "../assets/specialties/all_specialists/s6.jpeg",
+    img: "../assets/specialties/create_a_2d_hand_drawn_digital_illustration_representing (3).jpeg",
   },
 ];
 
@@ -70,7 +71,7 @@ if (icons.length > 0) {
 // دالة تهيئة آمنة
 function initNavbar() {
   const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
+   const navLinks = document.getElementById("navLinks");
   const dropdowns = document.querySelectorAll(".dropdown");
   const globeMobile = document.getElementById("globeMobile");
 
@@ -83,6 +84,7 @@ function initNavbar() {
   // تفعيل القائمة المنسدلة للجوال
   menuToggle.addEventListener("click", function () {
     navLinks.classList.toggle("active");
+     menuToggle.classList.toggle("active");
   });
 
   // تفعيل القوائم المنسدلة في وضع الجوال
@@ -325,3 +327,23 @@ document.addEventListener("DOMContentLoaded", function () {
     updateImages();
   }
 });
+
+function toggleComingSoonAlert() {
+    if (showComingSoonAlert.style.display === "flex") {
+        showComingSoonAlert.style.display = "none";
+    } else {
+        showComingSoonAlert.style.display = "flex";
+        setTimeout(() => {
+            showComingSoonAlert.style.display = "none";
+        }, 4000);
+    }
+    showComingSoonAlert.animate(
+        {
+            opacity: [0, 1]
+        },
+        {
+            duration: 500,
+            easing: "ease-in-out"
+        }
+    );
+}

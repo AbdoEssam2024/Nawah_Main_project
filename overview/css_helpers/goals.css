@@ -57,13 +57,12 @@
 
 .goals .img {
     /* width: 100%; */
-    width: 400px;
+    width: 468px;
     height: 624px;
-    border-radius: 12px;
-   gap: 340px;
+    /* border-radius: 12px; */
     margin-bottom: 10px;
     object-fit: cover;
-    perspective: 00px;
+    perspective: 1000px;
 }
 
 
