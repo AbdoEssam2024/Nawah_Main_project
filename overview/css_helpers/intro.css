@@ -38,12 +38,14 @@
     font-size: 7rem;
     margin: 0 0 10px 0;
     /* font-weight: bold; */
-    Font-style: "italic";
+  font-family: GT-America-Compressed, "Riot Sans", sans-serif;
+    font-style: italic;
+    font-weight: 700;
 }
 
 .banner p {
-    font-size: 1.2rem;
-    max-width: 600px;
+       font-size: 1.2rem;
+    max-width: 700px;
     line-height: 1.5;
     margin-top: 50px;
     color: white;

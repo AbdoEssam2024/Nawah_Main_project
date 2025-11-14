@@ -3,6 +3,47 @@ const title = document.querySelector(".image-container h4");
 const shortDesc = document.querySelector(".image-container > p:first-of-type");
 const longDesc = document.querySelector(".image-container > p:last-of-type");
 const icons = document.querySelectorAll(".icons img");
+const iconsContainer = document.querySelector(".icons"); 
+const nextArrow = document.querySelector(".next-arrow1");
+const prevArrow = document.querySelector(".prev-arrow1");
+
+// مقدار السحب
+const scrollAmount = 200;
+
+// تحديث حالة الأسهم
+function updateArrows() {
+  const maxScroll = iconsContainer.scrollWidth - iconsContainer.clientWidth;
+
+  if (iconsContainer.scrollLeft <= 0) {
+    prevArrow.classList.add("disabled");
+    prevArrow.classList.remove("active");
+  } else {
+    prevArrow.classList.remove("disabled");
+    prevArrow.classList.add("active");
+  }
+
+  if (iconsContainer.scrollLeft >= maxScroll) {
+    nextArrow.classList.add("disabled");
+    nextArrow.classList.remove("active");
+  } else {
+    nextArrow.classList.remove("disabled");
+    nextArrow.classList.add("active");
+  }
+}
+
+// السحب عند الضغط
+nextArrow.addEventListener("click", () => {
+  iconsContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  setTimeout(updateArrows, 300);
+});
+
+prevArrow.addEventListener("click", () => {
+  iconsContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  setTimeout(updateArrows, 300);
+});
+
+// تشغيل أول مرة
+updateArrows();
 
 const specialtiesData = [
   {
@@ -325,3 +366,110 @@ document.addEventListener("DOMContentLoaded", function () {
     updateImages();
   }
 });
+
+
+
+// News js Code
+function initNavbar() {
+  const menuToggle = document.getElementById("menuToggle");
+   const navLinks = document.getElementById("navLinks");
+  const dropdowns = document.querySelectorAll(".dropdown");
+  const globeMobile = document.getElementById("globeMobile");
+
+  // التحقق من وجود العناصر الأساسية
+  if (!menuToggle || !navLinks) {
+    console.warn("عناصر القائمة غير موجودة في الصفحة");
+    return;
+  }
+
+  // تفعيل القائمة المنسدلة للجوال
+  menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+     menuToggle.classList.toggle("active");
+  });
+
+  // تفعيل القوائم المنسدلة في وضع الجوال
+  if (dropdowns.length > 0) {
+    dropdowns.forEach((dropdown) => {
+      dropdown.addEventListener("click", function (e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          this.classList.toggle("active");
+
+          // إغلاق القوائم المنسدلة الأخرى
+          dropdowns.forEach((otherDropdown) => {
+            if (otherDropdown !== this && otherDropdown.classList) {
+              otherDropdown.classList.remove("active");
+            }
+          });
+        }
+      });
+    });
+  }
+
+  // إغلاق القائمة عند النقر خارجها (للجوال)
+  document.addEventListener("click", function (e) {
+    if (
+      window.innerWidth <= 768 &&
+      navLinks &&
+      menuToggle &&
+      !navLinks.contains(e.target) &&
+      !menuToggle.contains(e.target) &&
+      (!globeMobile || !globeMobile.contains(e.target))
+    ) {
+      navLinks.classList.remove("active");
+
+      // إغلاق جميع القوائم المنسدلة
+      dropdowns.forEach((dropdown) => {
+        if (dropdown.classList) {
+          dropdown.classList.remove("active");
+        }
+      });
+    }
+  });
+
+  // إغلاق القائمة عند تغيير حجم النافذة
+  window.addEventListener("resize", function () {
+    if (navLinks && window.innerWidth > 768) {
+      navLinks.classList.remove("active");
+
+      // إغلاق جميع القوائم المنسدلة
+      dropdowns.forEach((dropdown) => {
+        if (dropdown.classList) {
+          dropdown.classList.remove("active");
+        }
+      });
+    }
+  });
+}
+
+// تشغيل التهيئة عندما تكون الصفحة جاهزة
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initNavbar);
+} else {
+  initNavbar();
+}
+
+function updateArrows() {
+  const maxScroll = iconsContainer.scrollWidth - iconsContainer.clientWidth;
+
+  // السهم اليسار
+  if (iconsContainer.scrollLeft <= 0) {
+    prevArrow.classList.add("disabled");
+    prevArrow.classList.remove("active");
+  } else {
+    prevArrow.classList.remove("disabled");
+    prevArrow.classList.add("active");
+  }
+
+  // السهم اليمين
+  if (iconsContainer.scrollLeft >= maxScroll - 1) {
+    nextArrow.classList.add("disabled");
+    nextArrow.classList.remove("active");
+  } else {
+    nextArrow.classList.remove("disabled");
+    nextArrow.classList.add("active");
+  }
+}
+
+

@@ -1,4 +1,4 @@
-.navbar {
+ .navbar {
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -12,24 +12,26 @@
   direction: rtl;
 }
 
-.logo {
+ .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 1px;
   direction: ltr;
-
+  
 }
 
 .logo img {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
 }
 
 .logo span {
-  font-size: 25px;
+  font-size: 13px;
   font-weight: bold;
   color: #fff;
-}
+ 
+  }
+  
 
 /* الروابط */
 .nav-links {
@@ -97,11 +99,9 @@
   color: #fff;
   text-decoration: none;
   font-size: 14px;
-}
+ }
 
-.dropdown-menu li:hover {
-  background-color: #333;
-}
+ 
 
 .dropdown:hover .dropdown-menu {
   display: block;
@@ -131,6 +131,15 @@
   flex-direction: column;
   cursor: pointer;
   padding: 5px;
+ 
+  font-size: 17px; 
+  color: rgb(244, 245, 243);
+  background-color: rgba(49, 49, 49, 0.76);
+   border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 50px;        
+  height: 46px; 
 }
 
 .menu-toggle span {

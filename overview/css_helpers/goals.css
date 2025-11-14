@@ -23,6 +23,9 @@
     text-align: center;
     line-height: 64px;
     margin: 0px;
+        font-family: GT-America-Compressed, "Riot Sans", sans-serif;
+    font-style: italic;
+    font-weight: 700;
 }
 
 
@@ -59,7 +62,7 @@
     /* width: 100%; */
     width: 400px;
     height: 624px;
-    border-radius: 12px;
+   
    gap: 340px;
     margin-bottom: 10px;
     object-fit: cover;
@@ -73,8 +76,26 @@
     color: white;
     font-weight: 700;
     /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); */
+    margin: 5px 0 9px 0;
+        font-family: Spiegel, sans-serif;
+    word-break: break-word;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
 }
-
+.goals-navigation{
+    display: flex;
+  flex-direction: row-reverse;  /* ← هنا الريفيرس */
+  align-items: center;
+  gap: 10px; 
+  width: 80%;
+  overflow-x: auto;   /* لو عايز Scroll */
+}
+.goals-navigation hr{  flex: 1;                     /* يخلي الخط ياخد المساحة المتبقية */
+  border: none;
+  border-bottom: 1px solid #ccc;}
 .goals p {
     font-size: 1rem;
     line-height: 1.8;
@@ -82,4 +103,5 @@
     font-weight: 400;
     /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); */
     margin-top: 0px;
+    width: 120%;
 }

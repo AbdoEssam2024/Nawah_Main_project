@@ -4,6 +4,7 @@
 body {
   margin: 0;
   font-family: "Cairo", sans-serif;
+   scrollbar-width: none;
 
 }
 
@@ -12,6 +13,25 @@ body {
   overflow-x: hidden;
 }
 /* start footer */
+/*  not in the main code*/
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+    margin: 0px;
+  font-family: "Cairo", sans-serif;
+}
+main {
+  flex: 1; 
+}
+/*------*/
+
+
+/* start footer */
+
 .site-footer {
   background-color: #000;
   color: white;
@@ -41,7 +61,7 @@ body {
 }
 
 .footer-icons a:hover {
-  background-color: #40E0D0;
+  background-color: #32C7ff;
   color: #000;
 }
 
