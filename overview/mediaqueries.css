@@ -1,4 +1,3 @@
-
 /* ========== Media Queries للـ Intro Section ========== */
 @media screen and (max-width: 1200px) {
     .banner h1 {
@@ -31,7 +30,6 @@
     .banner {
         height: 500px;
         padding: 25px;
-        /* text-align: center; */
     }
     
     .banner h1 {
@@ -41,82 +39,80 @@
     .banner p {
         font-size: 0.95rem;
         max-width: 400px;
-        margin: 30px  0;
+        margin: 30px 0;
     }
 }
-@media screen and (max-width: 480px){
-    .banner{
+
+@media screen and (max-width: 480px) {
+    .banner {
         min-height: 500px;
-        padding: 75px;
-        /* text-align: center; */
-        margin-bottom: 0px;
+        padding: 40px 20px;
+        margin-bottom: 0;
     }
     
     .banner h1 {
-       
-       text-align: center;
-     
+        text-align: start;
+        
+        
+        line-height: 1.2;
     }
     
     .banner p {
-        font-size: 0.75rem;
-        max-width: 400px;
-        margin: 30px  0;
-         text-align: center;
+        font-size: 0.9rem;
+        max-width: 100%;
+        margin: 20px 0;
+        text-align: center;
+        padding: 0 10px;
     }
 }
 
-
 /* ========== Media Queries للـ Project Goals ========== */
-@media screen and (max-width: 1440px) {   .goals-navigation {
-   width: 100%;
-    gap: 15px;
-    /* justify-content: center; */
-    /* align-items: center; */
-            margin-bottom: 220px;
-    direction: ltr;
-    color: #050505;
-  }
-
+@media screen and (max-width: 1440px) {
+    .goals-navigation {
+        width: 100%;
+        gap: 15px;
+        margin-bottom: 100px;
+          display: flex;
+  flex-direction: row-reverse;
+    }
 }
+
 @media screen and (max-width: 1200px) {
     .goal h2 {
-        font-size: 70px;
+        font-size: 5rem;
     }
     
     .goals {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-       margin-bottom: 0;
+        margin-bottom: 0;
     }
     
     .goals .img {
         width: 300px;
-        height: 500px;
+        height: 400px;
     }
+    
     .goals > div {
-   
-          margin-bottom: 0;
-  }
+        margin-bottom: 0;
+    }
 
-   .goals-navigation {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-  
-    direction: ltr;
-    color: #050505;
-  }
+    .goals-navigation {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        
+       
+    }
 }
 
 @media screen and (max-width: 992px) {
     .goal {
-        padding: 50px 30px;
-        padding-bottom: 80px;
+        padding: 50px 30px 80px;
     }
     
     .goal h2 {
-        font-size: 60px;
+        font-size: 4rem;
         line-height: 1.1;
     }
     
@@ -128,7 +124,7 @@
     
     .goals .img {
         width: 350px;
-        height: 450px;
+        height: 400px;
     }
     
     .goals h3 {
@@ -141,303 +137,222 @@
 }
 
 @media screen and (max-width: 768px) {
-  .goal {
-    padding: 30px 20px;
-            padding-bottom: 200px;
-    position: relative;
-    overflow: auto;
-  }
-
-  .goal h2 {
-    font-size: 45px;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .goals {
-    gap: 30px;
-    padding: 15px;
-    position: relative;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* إخفاء جميع الأهداف افتراضياً */
-  .goals > div {
-    /* display: none; */
-    padding: 25px 20px;
-    animation: fadeIn 0.4s ease;
-    width: 100%;
-    max-width: 200px;
-            margin-bottom: 0;
-  }
-
-  /* عرض الشريحة النشطة فقط */
-  .goals > div.active {
-    display: block;
-  }
-
-  .goals .img {
-    width: 100%;
-    max-width: 300px;
-    height: 380px;
-    margin: 0 auto;
-    display: block;
-    object-fit: cover;
-  }
-
-  .goals h3 {
-    font-size: 1.3rem;
-    text-align: center;
-    margin: 15px 0 10px 0;
-  }
-
-  .goals p {
-    font-size: 0.95rem;
-    text-align: center;
-    line-height: 1.5;
-  }
-
-  /* تصميم أزرار التنقل الجانبية */
-  .goals-navigation {
-    display: flex;
-    gap: 15px;
-    /* justify-content: center; */
-    /* align-items: center; */
-   
-    direction: ltr;
-    
-  }
-
-  .nav-arrow {
-    color:#426dda; 
-    border: none;
-    width: 55px;
-    height: 55px;
-    font-size:45px; 
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-  }
-
-  .nav-arrow:hover:not(:disabled) {
-    transform: scale(1.1);
-  }
-
-  .nav-arrow:active {
-    transform: scale(0.95);
-  }
-
-  .nav-arrow:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-    transform: none;
-  }
-
-  /* السهم النشط */
-  .nav-arrow.active {
-    color: white; /* السهم اللي دايس عليه لونه أبيض */
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateX(15px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-   hr {
-            border: none;
-            height:2px;
-            background:white;
-            border-radius: 5px;
-            margin: 30px 0;
-            width: 100%;
-            /* box-shadow: 0 0 10px rgba(253, 187, 45, 0.5); */
-        }
-        
-}
-@media screen and (max-width: 480px){
     .goal {
-    padding: 0px 20px;
-    padding-bottom: 70px;
-    position: relative;
-    margin-top: 222px;
-    margin-top: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .goal h2 {
-    font-size: 45px;
-    text-align: center;
-   
-    font-size: 64px;
-        line-height: 64px;
-  }
-
-  .goals {
-    gap: 30px;
-    padding: 15px;
-    position: relative;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
-  }
-
-  /* إخفاء جميع الأهداف افتراضياً */
-  .goals > div {
-    /* display: none; */
-    padding: 25px 20px;
-    animation: fadeIn 0.4s ease;
-    width: 100%;
-    max-width: 400px;
-            margin: 0;
-  }
-
-  /* عرض الشريحة النشطة فقط */
-  .goals > div.active {
-    display: block;
-  }
-
-  .goals .img {
-    width: 100%;
-    max-width: 300px;
-    height: 380px;
-    margin: 0 auto;
-   
-    object-fit: cover;
-    text-align: center;
-  }
-
-  .goals h3 {
-    font-size: 1.3rem;
-    text-align: center;
-    margin: 15px 0 10px 0;
-  }
-
-  .goals p {
-    font-size: 0.95rem;
-    text-align: center;
-    line-height: 1.5;
-  }
-
-  /* تصميم أزرار التنقل الجانبية */
-  .goals-navigation {
-    display: flex;
-    gap: 15px;
-    /* justify-content: center; */
-    /* align-items: center; */
-    margin-top:-60px; /* ← رفع الأزرار لفوق */
-    margin-bottom: 40px;
-    direction: ltr;
-    
-        width: 90%;
-  }
-
-  .nav-arrow {
-    color:#426dda; 
-    border: none;
-    width: 55px;
-    height: 55px;
-    font-size:45px; 
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-  }
-
-  .nav-arrow:hover:not(:disabled) {
-    transform: scale(1.1);
-  }
-
-  .nav-arrow:active {
-    transform: scale(0.95);
-  }
-
-  .nav-arrow:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-    transform: none;
-  }
-
-  /* السهم النشط */
-  .nav-arrow.active {
-    color: white; /* السهم اللي دايس عليه لونه أبيض */
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateX(15px);
+        padding: 30px 20px 80px;
+        position: relative;
+        overflow: hidden;
     }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
 
-   hr {
-            border: none;
-            height:2px;
-            background:white;
-            border-radius: 5px;
-            margin: 30px 0;
-            width: 100%;
-            /* box-shadow: 0 0 10px rgba(253, 187, 45, 0.5); */
+    .goal h2 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .goals {
+        gap: 30px;
+        padding: 15px;
+        position: relative;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .goals > div {
+        padding: 20px;
+        animation: fadeIn 0.4s ease;
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 0;
+    }
+
+    .goals > div.active {
+        display: block;
+    }
+
+    .goals .img {
+        width: 100%;
+        max-width: 280px;
+        height: 320px;
+        margin: 0 auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    .goals h3 {
+        font-size: 1.3rem;
+        text-align: center;
+        margin: 15px 0 10px;
+    }
+
+    .goals p {
+        font-size: 0.9rem;
+        text-align: center;
+        line-height: 1.5;
+                display: contents;
+    }
+
+  
+
+ 
+
+    .nav-arrow:hover:not(:disabled) {
+        transform: scale(1.1);
+       color: rgb(31, 107, 206);
+    }
+
+    .nav-arrow:active {
+        transform: scale(0.95);
+    }
+
+    .nav-arrow:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(15px);
         }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    hr {
+        border: none;
+        height: 2px;
+        background: white;
+        border-radius: 5px;
+        margin: 30px 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .goal {
+               padding: 20px 1px 60px;
+        position: relative;
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .goal h2 {
+        font-size: 3.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .goals {
+        gap: 25px;
+        padding: 10px;
+        position: relative;
+        min-height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .goals > div {
+        padding: 15px;
+        animation: fadeIn 0.4s ease;
+        width: 100%;
+        max-width: 280px;
+        margin: 0;
+    }
+
+    .goals .img {
+        width: 100%;
+        max-width: 250px;
+        height: 280px;
+        margin: 0 auto;
+        object-fit: cover;
+        text-align: center;
+    }
+
+    .goals h3 {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 10px 0 8px;
+    }
+
+    .goals p {
+                width: 270px;
+        font-size: 0.85rem;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .goals-navigation {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+   
+    }
+
+    .nav-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+    }
 }
 
 /* ========== Media Queries للـ Specialties ========== */
-@media screen and (max-width: 1440px) {
-   
-}
 @media screen and (max-width: 1200px) {
     .specialties {
-        padding: 70px 30px;
+        padding: 60px 30px;
     }
     
     .text h2 {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     
     .image-3d {
-        width: 350px;
-        height: 350px;
+        width: 320px;
+        height: 320px;
     }
 
-    .icons img{
-        width:50px;
-        height:50px;
-      margin-left: 10px;
-      
+    .icons img {
+         width: 80px;
+        height: 80px;
+        padding: 0 15px;
+        /* margin-left: 10px; */
     }
+    
     .container {
         grid-template-columns: 1fr;
         gap: 40px;
-       
     }
-    .specialties-navigation { width: 50%;}
-   
+    
+    .specialties-navigation {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .specialties-navigation {
+        flex-direction: row;
+        width: 100%;
+          display: flex;
+  flex-direction: row-reverse;
+    }
 }
 
 @media screen and (max-width: 992px) {
     .specialties {
-        margin: 0 30px;
+        margin: 0 20px;
     }
     
     .container {
@@ -456,160 +371,124 @@
     }
     
     .text h2 {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     
     .btn {
         align-self: center;
+        width: 100%;
+        max-width: 400px;
     }
-    
-   
 }
 
 @media screen and (max-width: 768px) {
     .specialties {
-        padding: 50px 20px;
+        padding: 40px 20px;
+                display: flex;
+        justify-content: center;
     }
     
     .text h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     .text p {
-        font-size:0.9rem;
+        font-size: 0.9rem;
     }
     
     .image-3d {
-        width: 300px;
-        height: 300px;
+        width: 280px;
+        height: 280px;
     }
     
     .image-container h4 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .icons img {
-        width: 60px;
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 350px;
         height: 60px;
     }
 
-    .btn{
-        width:600px;
-        height:70px;
+    .specialties-navigation {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        direction: ltr;
+        justify-content: center;
+                /* gap: 20px; */
+        max-width: 300px;
     }
 
-     .specialties-navigation {
-    display: flex;
-    /* gap: 15px; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    margin-top:-10px; /* ← رفع الأزرار لفوق */
-    margin-bottom: 40px;
-    direction: ltr;
-    margin-left:40px;
-            display: none;
-  }
-
-  .nav-arrow1 {
-    color:#426dda; 
-    border: none;
-    width: 55px;
-    height: 55px;
-    font-size:35px; 
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-  }
-
-  .nav-arrow1:hover:not(:disabled) {
-    transform: scale(1.1);
-  }
-
-  .nav-arrow1:active {
-    transform: scale(0.95);
-  }
-
-  .nav-arrow1:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-    transform: none;
-    display: flex;
-  }
-
-  /* السهم النشط */
-  .nav-arrow1.active {
-    color: #c2b8b885; /* السهم اللي دايس عليه لونه أبيض */
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateX(15px);
+    .nav-arrow {
+       
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
     }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
 
- .hrspecialties{
-            border: none;
-            height:2px;
-            background:#050505;
-            border-radius: 5px;
-            margin: 30px 0;
-            width:70%;
-            /* margin-left:-20px; */
-      }
-        
-    
+    .nav-arrow:hover:not(:disabled) {
+        transform: scale(1.1);
+        color: rgb(31, 107, 206);
+    }
+
+    .nav-arrow:active {
+        transform: scale(0.95);
+    }
+
+    .nav-arrow:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .hrspecialties {
+        border: none;
+        height: 2px;
+        background: #050505;
+        border-radius: 5px;
+        margin: 30px 0;
+        width: 200px;
+    }
 }
 
 /* ========== Media Queries للـ Capabilities ========== */
-@media screen and (max-width: 1440px) {
-    .cap-content>p {
- 
-  
-}}
 @media screen and (max-width: 1200px) {
-      .capabilitiess {
-     background-size: cover;
-       }
-    .capabilities {
-       color: #426dda;
+    .capabilitiess {
+        background-size: cover;
     }
     
-    .cap-content h2 {
-        font-size: 4rem;
+    .capabilities {
+        color: #426dda;
     }
-    .cap-sub-title h3{
-        
-    }
-    .cap-sub-title p{
-
+    
+    .cap-heading h2 {
+        font-size: 3.5rem;
     }
     
     .cap-main-image {
-        width: 450px;
-        height: 250px;
+        width: 400px;
+        height: 220px;
     }
 
-    .cap-icon{
-        width:70px;
-        height:70px;
+    .cap-icon {
+        width: 70px;
+        height: 70px;
     }
-
-     .capabilities-navigation{
-       
-     }
-
-    }
+}
 
 @media screen and (max-width: 1024px) {
-   
     .capabilities {
         color: #426dda;
         padding-bottom: 45px;
@@ -618,85 +497,96 @@
     .capabilities-container {
         grid-template-columns: 1fr;
         gap: 40px;
-              grid-template-columns: none;
-              padding: 55px 0 0 0;
-       
+        padding: 40px 20px 0;
     }
-    .experience{
-          grid-template-columns: 1fr;
+    
+    .experience {
+        grid-template-columns: 1fr;
     }
-    .experience__img-continer{order: 2;}
+    
+    .experience__img-continer {
+        order: 2;
+    }
     
     .cap-image-wrapper {
         align-items: center;
         text-align: center;
         order: 2;
-         margin: 0;
+        margin: 0;
     }
-    .experience__text-continer{
-       margin-top: 100px;
+    
+    .experience__text-continer {
+        margin-top: 60px;
         order: 1;
-    margin-bottom: 0;
+        margin-bottom: 0;
     }
     
     .cap-content {
-
         order: 1;
         text-align: center;
     }
     
-    .cap-content h2 {
-        font-size: 3.5rem;
+    .cap-heading h2 {
+        font-size: 3rem;
     }
     
     .cap-icons {
         justify-content: center;
+                padding: 0 40px;
     }
-
-    .capabilities-navigation{
-        
-     }
 }
 
 @media screen and (max-width: 768px) {
-  
     .capabilities {
         text-align: center;
-        
-       }
+        padding: 30px 15px;
+    }
 
-       .capabilities-container{
-       margin-top:100px;
-       margin-bottom: 1px;
-       }
+    .capabilities-container {
+        margin-top: 60px;
+        margin-bottom: 30px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 
-    .cap-image-wrapper{
+    .cap-image-wrapper {
         align-items: center;
         text-align: center;
+        order: 2;
     }
     
-    .cap-content h2 {
-        font-size: 6rem;
+    .cap-content {
+        order: 1;
+    }
+    
+    .cap-heading h2 {
+       font-size: 4.5rem;
+        line-height: 1;
+        display: contents;
     }
     
     .cap-content > p {
-        font-size: 1.1rem;
-       margin-left: 20px;
-      
+        font-size: 0.95rem;
+        margin: 0 10px;
+        
     }
     
     .cap-main-image {
-       
-        max-width: 400px;
-        height: 220px;
+        max-width: 100%;
+        height: 200px;
     }
     
-    .cap-sub-title h3  {
-        font-size: 1.8rem;
+    .cap-sub-title {
+        width: 100%;
+    }
+    
+    .cap-sub-title h3 {
+        font-size: 1.4rem;
     }
 
-    .cap-sub-title p{
-        margin-right: 20px;
+    .cap-sub-title p {
+        margin: 0 10px;
+        font-size: 0.85rem;
     }
     
     .cap-icon {
@@ -704,205 +594,226 @@
         height: 70px;
     }
 
-     .capabilities-navigation {
-    display: flex;
-    /* gap: 15px; */
-    /* justify-content: center; */
-    /* align-items: center; */
-   margin-bottom:-1500px; /* ← رفع الأزرار لفوق */
-    /* margin-bottom: 40px; */
-    direction: ltr;
-     margin-left:40px;
-    
-  }
-
-  .nav-arrow2 {
-    color:#426dda; 
-    border: none;
-    width:20px;
-    height:20px;
-    font-size:18px; 
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-   }
-
-  .nav-arrow2:hover:not(:disabled) {
-    transform: scale(1.1);
-  }
-
-  .nav-arrow2:active {
-    transform: scale(0.95);
-  }
-
-  .nav-arrow2:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-    transform: none;
-    display: flex;
-  }
-
-  /* السهم النشط */
-  .nav-arrow2.active {
-    color: #c2b8b885; /* السهم اللي دايس عليه لونه أبيض */
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateX(15px);
+    .capabilities-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin: 25px 0;
+        direction: ltr;
+        position: relative;
     }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
 
-   .hrcapabilities{
-            border: none;
-            height:2px;
-            background:#bcbcbc;
-            border-radius: 5px;
-            margin: 30px 0;
-            width:70%;
-            /* margin-left:-20px; */
-      }
+    .nav-arrow {
+        
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+    }
+
+    .nav-arrow:hover:not(:disabled) {
+        transform: scale(1.1);
+        
+        color: rgb(31, 107, 206);
+    }
+
+    .nav-arrow:active {
+        transform: scale(0.95);
+    }
+
+    .nav-arrow:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .hrcapabilities {
+        border: none;
+        height: 2px;
+        background: #bcbcbc;
+        border-radius: 5px;
+        margin: 0;
+        width: 120px;
+    }
 }
 
-@media screen and (max-width: 480px) {
-  
+@media screen and (max-width: 425px) {
     .capabilities {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 20px 10px;
+    }
+    .capabilities-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* width: 100%; */
+    direction: ltr;
+    margin-top: 20px;
+    position: relative;
+}
+    .capabilities-container {
+      
+                margin: 40px 10px 0 23px;
     }
     
-    .cap-content h2 {
-        font-size: 2.0rem;
+    .cap-heading h2 {
+        font-size: 2rem;
     }
 
-         
     .cap-content > p {
-        font-size: 1rem;
+        font-size: 0.85rem;
+        margin: 0 5px;
     }
     
-    .cap-image-wrapper{
+    .cap-image-wrapper {
         display: block;
-        
-        
-    }
-    .cap-main-image {
-          
-        height: 200px;
-        width:260px;
-    }
-    
-    .cap-sub-title{
         width: 100%;
     }
+    
+    .cap-main-image {
+        height: 160px;
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .cap-sub-title {
+               width: 90%;
+        padding: 0 5px;
+    }
+    
     .cap-sub-title h3 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     
     .cap-sub-title p {
-        font-size: 0.9rem;
-        margin-left:30px;
+        font-size: 0.8rem;
+        margin: 0 5px;
+        line-height: 1.5;
     }
     
-    .cap-icon {
-        width:40px;
-        height:40px;
+  .experience__img-continer p {
+    max-width: 400px;
+  }
+    
+    .capabilities-navigation {
+        margin: 20px 0;
     }
-     .experience__img-continer{
-        margin-bottom: 100px;
-        
+    
+ 
+    
+    .hrcapabilities {
+        width: 100px;
     }
+    
+    .experience__img-continer {
+        margin-bottom: 60px;
+    }
+    .cap-heading{        font-size: 64px;
+        line-height: 64px;
+}
 }
 
-
 @media screen and (max-width: 320px) {
-
-       .capabilities {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .capabilities {
+        padding: 15px 5px;
     }
     
-    .cap-content h2 {
+    .capabilities-container {
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    
+    .cap-heading h2 {
         font-size: 1.8rem;
     }
 
-         
     .cap-content > p {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     
     .cap-main-image {
-        height: 180px;
-        width:250px;
+        height: 140px;
+        max-width: 220px;
     }
     
     .cap-sub-title h3 {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
     
     .cap-sub-title p {
-        font-size: 0.3rem;
-        margin-left:30px;
-        margin: 22px;
+        font-size: 0.75rem;
+        margin: 0 5px;
+        line-height: 1.4;
     }
-    .experience__img-continer{
-        margin-bottom: 100px;
-        
-    }
-    .experience__img-continer p{
-       width: 300px;
-        
-    }
+    
     .cap-icon {
-        width:40px;
-        height:40px;
+        width: 40px;
+        height: 40px;
     }
-  
+    
+    .experience__img-continer {
+        margin-bottom: 50px;
+    }
+    
+    .experience__img-continer p {
+        width: 260px;
+        font-size: 0.75rem;
+    }
+    
+    .capabilities-navigation {
+        gap: 10px;
+    }
+    
+    .nav-arrow {
+        width: 28px;
+    
+    }
+    
+    .hrcapabilities {
+        width: 80px;
+    }
+
+    
 }
 
 /* ========== Media Queries للـ Experience ========== */
 @media screen and (max-width: 1200px) {
     .experience {
-        gap: 150px;
-        padding: 70px 80px;
-        
+        gap: 100px;
+        padding: 60px 40px;
     }
     
     .experience__img-continer img {
-        width:600px;
-        height:600px;
+        width: 500px;
+        height: 500px;
     }
     
     .experience__img-continer::before {
-        width:350px;
-        height:350px;
+        width: 300px;
+        height: 300px;
     }
     
     .experience__text-continer h2 {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
-     .experience__img-continer{
-               margin-bottom: 250px;
-        
+    
+    .experience__img-continer {
+        margin-bottom: 150px;
     }
 }
 
 @media screen and (max-width: 992px) {
     .experience {
         flex-direction: column;
-        gap: 0px;
-        padding: 60px 40px;
+        gap: 40px;
+        padding: 50px 30px;
         text-align: center;
     }
     
@@ -913,7 +824,7 @@
     }
     
     .experience__text-continer h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     .experience__img-continer img {
@@ -922,682 +833,188 @@
     }
     
     .experience__img-continer::before {
-        width: 280px;
-        height: 280px;
-    }
-    
-    .icons-tab {
-        gap: 30px;
-    }
-    
-    .icon-tab img {
-        width: 65px;
-        height: 65px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .experience {
-        padding: 50px 30px;
-        gap: 0px;
-        margin-top:-50px;        
-    }
-    
-    .experience__text-continer h2 {
-        font-size: 2.5rem;
-    }
-    
-    .experience__img-continer img {
-        width:500px;
-        height:500px;
-    }
-    
-    .experience__img-continer::before {
-        width:300px;
-        height:300px;
-        border-width: 15px;
-        top:48%;
-    }    
-    
-    .experience__img-continer span {
-        font-size: 1.6rem;
+        width: 250px;
+        height: 250px;
     }
     
     .icons-tab {
         gap: 25px;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: -30px;
     }
     
     .icon-tab img {
         width: 60px;
         height: 60px;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .experience {
+        padding: 40px 20px;
+        gap: 30px;
+        margin-top: 0;
+    }
+    
+    .experience__text-continer h2 {
+        font-size: 2.2rem;
+    }
+    
+    .experience__img-continer img {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .experience__img-continer::before {
+        width: 220px;
+        height: 220px;
+        border-width: 12px;
+        top: 48%;
+    }
+    
+    .experience__img-continer span {
+        font-size: 1.4rem;
+                margin-top: 80px;
+    }
+    
+    .icons-tab {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .icon-tab img {
+        width: 55px;
+        height: 55px;
+    }
     
     .icon-tab p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+    }
+    
+    .experience__img-continer {
+        margin-bottom: 80px;
     }
 }
 
 /* ========== Media Queries للـ Last Section ========== */
-@media screen and (max-width: 1440px) {
-    .nav-arrow{
-        display: none;
-        
-    }
-}
 @media screen and (max-width: 1200px) {
     .imgs__box {
-        gap: 30px;
-        padding: 70px 30px;
-        }
-    
-    .imgs__box-container img {
-        width: 300px;
-        height: 400px;
-    }
-       .nav-arrow{
-        display: none;
-        
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .imgs__box {
         gap: 25px;
-        padding: 60px 25px;
+        padding: 60px 30px;
     }
     
     .imgs__box-container img {
         width: 280px;
         height: 380px;
     }
+}
+
+@media screen and (max-width: 992px) {
+    .imgs__box {
+        gap: 20px;
+        padding: 50px 25px;
+    }
+    
+    .imgs__box-container img {
+        width: 250px;
+        height: 350px;
+    }
     
     .imgs__box-container p {
-        font-size: 1.1rem;
-    }
-    .nav-arrow{
-        display: none;
-        
+        font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 768px) {
     .imgs__box {
         flex-direction: column;
-        gap: 30px;
-        padding: 50px 20px;
+        gap: 25px;
+        padding: 40px 20px;
         align-items: center;
-        margin-top: -50px;
+        margin-top: 0;
     }
     
     .imgs__box-container img {
         width: 100%;
-        max-width:450px;
-        height: 550px;
+        max-width: 400px;
+        height: 450px;
     }
     
     .imgs__box-container p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
-
-     .last-navigation {
-    display: flex;
-    margin-left:160px;
-   align-self: flex-start;
- margin-top:-60px;
- direction: ltr;
-
-
-  }
-
-  .nav-arrow3 {
-    color:#426dda; 
-    border: none;
-    width:20px;
-    height:20px;
-    font-size:18px; 
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    transition: all 0.3s ease;
-    
-   }
-
-  .nav-arrow3:hover:not(:disabled) {
-    transform: scale(1.1);
-    display: flex;
-  }
-
-  .nav-arrow3:active {
-    transform: scale(0.95);
-  }
-
-  .nav-arrow3:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-    transform: none;
-    display: flex;
-  }
-
-  /* السهم النشط */
-  .nav-arrow3.active {
-    color: #bcbcbc; 
-  }
-  .nav-arrow{
-        display: none;
-        
+    .last-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0;
+        direction: ltr;
+        gap: 15px;
     }
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateX(15px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    
-  }
-
-  /* .hrlast{
-            border: none;
-            height:2px;
-            background:#050505;
-            border-radius: 5px;
-            margin: 30px 0;
-            width:70%;
-            margin-left:-20px;
+    .nav-arrow {
+       
       
-  } */
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     
+    }
+
+    .nav-arrow:hover:not(:disabled) {
+        transform: scale(1.1);
+        
+        color: rgb(52, 119, 196);
+    }
+
+    .nav-arrow:active {
+        transform: scale(0.95);
+    }
+
+    .nav-arrow:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        transform: none;
+    }
 }
 
 /* ========== Media Queries للـ Footer ========== */
 @media screen and (max-width: 768px) {
     .site-footer {
-        padding: 30px 15px;
+        padding: 25px 15px;
     }
     
-    .footer-project {
-        font-size: 1.1rem;
-        margin: 30px 0;
-    }
-    
-    .footer-links {
-        margin: 35px 0;
-    }
-    
-    .footer-links a {
-        margin: 0 10px;
-        font-size: 0.85rem;
-    }
-    
-    .footer-copy {
-        font-size: 0.85rem;
-    }
-}
-
-@media screen and (max-width: 450px) {
-
-    /* Header */
-    .navbar {
-        padding: 8px 10px;
-    }
-
-    .logo {
-        gap: 5px;
-    }
-
-    .logo img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .logo span {
-        font-size: 16px;
-    }
-
-    .nav-links a {
-        font-size: 14px;
-    }
-
-    .menu-toggle {
-        display: flex;
-        margin-left: 50px;
-    }
-
-    .globe-mobile {
-        font-size: 20px;
-        margin-right: 10px;
-    }
-
-    /* Intro */
-    .banner {
-        height: 40vh;
-        padding: 20px;
-    }
-
-    .banner h1 {
-        margin-top: 15%;
-        font-size: 2.5rem;
-    }
-
-    .banner p {
-        font-size: 0.9rem;
-        max-width: 90%;
-        margin-top: 5%;
-    }
-
-    /* Gooal */
-
-    .goal {
-        padding: 30px 15px;
-        padding-bottom: 60px;
-    }
-
-   
-
-    .goals .img {
-       
-        height: 320px;
-    }
-
-    .goals h3 {
-        font-size: 1.2rem;
-    }
-
-    .goals p {
-        font-size: 0.9rem;
-                display: contents;
-    }
-
-    /* Specialties */
-
-    .specialties {
-        text-align: center;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-
-    }
-
-    .text h2 {
-                font-size: 50px;
-        line-height: 50px;
-            font-family: GT-America-Compressed, "Riot Sans", sans-serif;
-    font-style: italic;
-    font-weight: 700;
-    }
-
-    .text p {
-        font-size: 0.5rem;
-        margin-right: 10px;
-    }
-
-    .image-3d {
-        width: 250px;
-        height: 250px;
-    }
-
-    .image-container h4 {
-        font-size: 1.5rem;
-    }
-
-    .image-container>p:first-of-type {
-        font-size: 1rem;
-    }
-
-    .image-container>p:last-of-type {
-        font-size: 0.5rem;
-    }
-
-    .icons img {
-               width: 52px;
-        height: 52px;
-    }
-
-    .btn {
-        width: 95%;
-        display: block;
-        margin: 20px auto;
-        height: 70px;
-        text-align: center;
-    }
-
-    .specialties-navigation {
-             display: flex;
-        /* gap: 15px; */
-        /* justify-content: center; */
-        /* align-items: center; */
-        margin-top: -10px;
-        margin-bottom: 40px;
-        width: 300px;
-        margin-left: 20px;
-    }
-
-    .nav-arrow1 {
-        color: #426dda;
-        border: none;
-        width: 55px;
-        height: 55px;
-        font-size: 35px;
-        font-weight: bold;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-    }
-
-    .nav-arrow1:hover:not(:disabled) {
-        transform: scale(1.1);
-    }
-
-    .nav-arrow1:active {
-        transform: scale(0.95);
-    }
-
-    .nav-arrow1:disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
-        transform: none;
-        display: flex;
-    }
-
-    /* السهم النشط */
-    .nav-arrow1.active {
-        color: #c2b8b885;
-        /* السهم اللي دايس عليه لونه أبيض */
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateX(15px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    /* Capabilities */
-
-    .capabilities {
-        color: #426dda;
-    }
-
-    .capabilities-container {
-        margin-top: 150px;
-    }
-
-    .cap-content h2 {
-        font-size: 2.5rem;
-                font-size: 54px;
-        line-height: 54px;
-
-    }
-
-
-    .cap-content>p {
-        font-size: 1rem;
-        
-    }
-
-    .cap-main-image {
-        height: 200px;
-        
-    }
-
-    .cap-sub-title h3 {
-        font-size: 1.5rem;
-    }
-
-    .cap-sub-title p {
-        font-size: 0.9rem;
-        margin-left: 30px;
-    }
-
-    .cap-icon {
-        width: 60px;
-        height: 60px;
-    }
-
-    .capabilities-navigation {
-        display: flex;
-        /* gap: 15px; */
-        /* justify-content: center; */
-        /* align-items: center; */
-        margin-bottom: -1550px;
-        /* margin-bottom: 40px; */
-        direction: ltr;
-        /* margin-right:50px; */
-    }
-
-    .nav-arrow2 {
-        color: #426dda;
-        border: none;
-        width: 20px;
-        height: 20px;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-    }
-
-    .nav-arrow2:hover:not(:disabled) {
-        transform: scale(1.1);
-    }
-
-    .nav-arrow2:active {
-        transform: scale(0.95);
-    }
-
-    .nav-arrow2:disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
-        transform: none;
-        display: flex;
-    }
-
-    /* السهم النشط */
-    .nav-arrow2.active {
-        color: #c2b8b885;
-        /* السهم اللي دايس عليه لونه أبيض */
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateX(15px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    /* Experience */
-
-    .experience {
-        padding: 40px 20px;
-        gap: 40px;
-    }
-
-    .experience__text-continer h2 {
-        font-size: 2rem;
-                font-size: 64px;
-        line-height: 64px;
-        margin-bottom: 40px;
-    }
-
-    .experience__img-continer img {
-        width: 350px;
-        height: 350px;
-    }
-
-    .experience__img-continer::before {
-        width: 210px;
-        height: 210px;
-        border-width: 12px;
-        top: 45%;
-        left: 52%;
-    }
-
-    .experience__img-continer span {
-        font-size: 1.4rem;
-    }
-
-    .experience__img-continer p {
-        font-size: 0.9rem;
-    }
-
-    .icons-tab {
-        gap: 20px;
-    }
-
-    .icon-tab img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .icon-tab p {
-        font-size: 0.8rem;
-    }
-
-    /* Image Box */
-
-    .imgs__box {
-        padding: 40px 15px;
-        gap: 25px;
-        align-items: center;
-    }
-
-    .imgs__box-container img {
-        height: 350px;
-    }
-
-    .imgs__box-container p {
-        font-size: 0.9rem;
-    }
-
-    .last-navigation {
-        display: flex;
-        margin-left: 160px;
-        align-self: flex-start;
-        margin-top: -60px;
-    }
-
-    /* Footer */
-
-    .site-footer {
-        padding: 25px 10px;
-    }
-
-    .footer-icons a {
-        width: 35px;
-        height: 35px;
-        margin: 0 5px;
-        font-size: 16px;
-    }
-
     .footer-project {
         font-size: 1rem;
         margin: 25px 0;
     }
-
+    
     .footer-links {
-        margin: 30px 0;
+        margin: 25px 0;
     }
-
+    
     .footer-links a {
-        display: block;
-        margin: 8px 0;
+        margin: 0 8px;
+        font-size: 0.8rem;
     }
-
+    
     .footer-copy {
         font-size: 0.8rem;
     }
 }
 
-
-
-
-
-
-@media screen and ( min-width: 768px) and (max-width: 1024px) {
-    .navbar {
-        padding: 10px 15px;
-        flex-wrap: wrap;
+/* Mobile Navigation - إصلاحات نهائية */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        margin-left: auto;
+        margin-right: 20px;
+        width: 70px;
     }
-    
-       /* container for globe + menu */
-  .mobile-icons {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  position: fixed;
-  top: 16px;
-  left:30px;
-  z-index: 1000;
-}
-  .globe-mobile {
-    display: flex;
-    cursor: pointer;
-    font-size: 20px;
-    padding: 1px;
-     
-  }
- 
-.menu-toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 40px;
-  height: 26px;
-  cursor: pointer;
-  z-index: 2000;
-}
 
-/* The three bars */
-.menu-toggle span {
-  display: block;
-  height: 10px;
-  width: 60%;
-  background-color: #fff;  
-  border-radius: 3px;
-  transition: all 0.3s ease;
-  
-}
-
-/* When active, create the X */
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-
-    .menu-toggle:hover {
-        background-color: #f9f9f923;
-    }
-    
     .nav-links {
         display: none;
         flex-direction: column;
@@ -1606,265 +1023,53 @@
         right: 0;
         width: 100%;
         background-color: #000;
-        padding: 50px 0;
-        gap: 2rem;
+        padding: 20px 0;
+        gap: 1.5rem;
         box-shadow: 0 5px 10px rgba(0,0,0,0.3);
     }
-    
+
     .nav-links.active {
         display: flex;
     }
-    
+
     .nav-links a {
-        padding: 10px  100px;
+        padding: 12px 20px;
         width: 100%;
         text-align: center;
-      
-     }
-    
-     .dropdown-menu {
-    position: static;
-    display: none;
-    background-color: #111;
-    width: 100%;
-    margin: 10px auto 0;
-     
-  }
-
-   .dropdown-menu  li{
-margin-bottom: 5%;
-
-  }
-
-  .dropdown.active .dropdown-menu {
-    display: block;
-       
-   }
-  .dropdown-menu a:hover {
-  background-color: #52525209;
-  width: 100%;
- }
- 
-    
-    .logo img {
-        width: 50px;
-        height: 50px;
+        font-size: 1rem;
     }
-    
-    .logo span {
-        font-size: 18px;
-    }
-    
-     .nav-links .icon.globe {
+
+    .dropdown-menu {
+        position: static;
         display: none;
+        background-color: #111;
+        width: 90%;
+        margin: 10px auto 0;
+        padding: 10px 0;
     }
     
-   
-}
-
-
- 
- 
- 
-/* ========== Media Queries للـ Footer ========== */
-@media screen and ( min-width: 768px) and (max-width: 1024px) {
-    .site-footer {
-        padding: 30px 15px;
-    }
-    
-    .footer-project {
-        font-size: 1.1rem;
-        margin: 30px 0;
-    }
-    
-    .footer-links {
-        margin: 35px 0;
-    }
-    
-    .footer-links a {
-        margin: 0 10px;
-        font-size: 0.85rem;
-    }
-    
-    .footer-copy {
-        font-size: 0.85rem;
-    }
-}
-
-@media screen and  (max-width: 768px)  {
-
-    /* Header */
-    .navbar {
-        padding: 8px 10px;
+    .dropdown-menu li {
+        margin-bottom: 8px;
     }
 
-    .logo {
-        gap: 5px;
+    .dropdown.active .dropdown-menu {
+        display: block;
     }
-
-    .logo img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .logo span {
-        font-size: 16px;
-    }
-
- 
-
-  
 
     .mobile-icons {
-  display: flex;
-  align-items: center;
-  gap: 1px;
-  position: fixed;
-  top: 16px;
-  left:15px;
-  z-index: 1000;
-}
-  .globe-mobile {
-    display: flex;
-    cursor: pointer;
-    font-size: 20px;
- margin-left:-20px;      
-  }
- 
-.menu-toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 40px;
-  height: 26px;
-  cursor: pointer;
-  z-index: 2000;
-}
-
-/* The three bars */
-.menu-toggle span {
-  display: block;
-  height: 10px;
-  width: 60%;
-  background-color: #fff;  
-  border-radius: 3px;
-  transition: all 0.3s ease;
-  
-}
-
-/* When active, create the X */
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}  
-
-    /* Footer */
-
-    .site-footer {
-        padding: 25px 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 1000;
     }
-
-    .footer-icons a {
-        width: 35px;
-        height: 35px;
-        margin: 0 5px;
-        font-size: 16px;
+    
+    .globe-mobile {
+        display: flex;
+        cursor: pointer;
+        font-size: 20px;
+        margin-left: 0;
     }
-
-    .footer-project {
-        font-size: 1rem;
-        margin: 25px 0;
-    }
-
-    .footer-links {
-        margin: 30px 0;
-    }
-
-    .footer-links a {
-        display: block;
-        margin: 8px 0;
-    }
-
-    .footer-copy {
-        font-size: 0.8rem;
-    }
-}
-
-
-
-/*new one */
-@media screen and (max-width: 768px) {
- 
-
-  .menu-toggle {
-    display: flex;
-    margin-left: auto;
-    margin-right: 30%;
-    width: 82px;
-  }
-
-  .menu-toggle:hover {
-    background-color: #f9f9f917;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    background-color: #000;
-    padding: 20px 0;
-    gap: 1.7rem;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links a {
-    padding: 10px 15px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .dropdown-menu {
-    position: static;
-    display: none;
-    background-color: #111;
-    width: 90%;
-    margin: 10px auto 0;
-  }
-    .dropdown-menu  li{
-     margin-bottom: 5%;
-
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: none;
-  }
-
-  .dropdown.active .dropdown-menu {
-    display: block;
-  }
-
-  /* hide desktop globe icon */
-  .nav-links .icon.globe {
-    display: none;
-  }
-
-  /* show mobile globe icon */
-  .globe-mobile {
-    display: flex;
-    margin-right:10%;
-  }
 }

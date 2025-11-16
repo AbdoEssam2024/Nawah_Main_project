@@ -8,7 +8,20 @@ const nextArrow = document.querySelector(".next-arrow1");
 const prevArrow = document.querySelector(".prev-arrow1");
 
 // مقدار السحب
-const scrollAmount = 200;
+
+const capIconsContainer = document.querySelector(".cap-icons");
+const prevArrow2 = document.querySelector(".prev-arrow2");
+const nextArrow2 = document.querySelector(".next-arrow2");
+const scrollAmount = 120;
+
+nextArrow2.addEventListener("click", () => {
+  capIconsContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
+});
+
+prevArrow2.addEventListener("click", () => {
+  capIconsContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+});
+
 
 // تحديث حالة الأسهم
 function updateArrows() {
@@ -473,3 +486,24 @@ function updateArrows() {
 }
 
 
+function updateArrows() {
+  const maxScroll = iconsContainer.scrollWidth - iconsContainer.clientWidth;
+
+  // السهم اليسار
+  if (iconsContainer.scrollLeft <= 0) {
+    prevArrow.classList.add("disabled");
+    prevArrow.classList.remove("active");
+  } else {
+    prevArrow.classList.remove("disabled");
+    prevArrow.classList.add("active");
+  }
+
+  // السهم اليمين
+  if (iconsContainer.scrollLeft >= maxScroll - 1) {
+    nextArrow.classList.add("disabled");
+    nextArrow.classList.remove("active");
+  } else {
+    nextArrow.classList.remove("disabled");
+    nextArrow.classList.add("active");
+  }
+}

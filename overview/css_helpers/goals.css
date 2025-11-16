@@ -43,7 +43,7 @@
 .goals>div {
     background: transparent;
     border-radius: 16px;
-    padding: 30px 25px;
+    padding: 0px 25px;
     box-shadow: none;
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@
 .goals .img {
     /* width: 100%; */
     width: 400px;
-    height: 624px;
+    height: 524px;
    
    gap: 340px;
     margin-bottom: 10px;
@@ -85,13 +85,16 @@
     text-align: center;
     margin-bottom: 8px;
 }
+
 .goals-navigation{
     display: flex;
-  flex-direction: row-reverse;  /* ← هنا الريفيرس */
+  justify-content: center;
   align-items: center;
   gap: 10px; 
   width: 80%;
   overflow-x: auto;   /* لو عايز Scroll */
+ 
+    flex-direction: row-reverse;
 }
 .goals-navigation hr{  flex: 1;                     /* يخلي الخط ياخد المساحة المتبقية */
   border: none;
